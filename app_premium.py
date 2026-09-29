@@ -108,10 +108,6 @@ def rgb_to_pil(image_array):
     )
 
 
-# ============================================================
-# CLASSIFIER MODEL
-# ============================================================
-
 CLASSIFIER_PATH = os.path.join(
     BASE_DIR,
     "models",

@@ -4,9 +4,6 @@ import random
 import pandas as pd
 
 
-# ============================================================
-# CONFIGURATION
-# ============================================================
 
 CSV_PATH = "Photos_data.xlsx - Sheet1.csv"
 
@@ -19,11 +16,6 @@ VAL_RATIO = 0.15
 TEST_RATIO = 0.15
 
 random.seed(42)
-
-
-# ============================================================
-# MORPHOLOGY MAPPING
-# ============================================================
 
 def map_morphology(value):
 

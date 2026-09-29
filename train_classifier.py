@@ -7,9 +7,6 @@ from torch.utils.data import DataLoader
 from sklearn.metrics import confusion_matrix, classification_report
 import numpy as np
 
-# ============================================================
-# PATHS
-# ============================================================
 
 DATASET_DIR = r"D:\MAJORPROJECT\classification_dataset_4class"
 MODEL_DIR = r"D:\MAJORPROJECT\models"
@@ -20,9 +17,6 @@ MODEL_PATH = os.path.join(
 
 os.makedirs(MODEL_DIR, exist_ok=True)
 
-# ============================================================
-# SETTINGS
-# ============================================================
 
 BATCH_SIZE = 64
 EPOCHS = 5
@@ -34,9 +28,6 @@ DEVICE = torch.device(
 
 print("Using device:", DEVICE)
 
-# ============================================================
-# TRANSFORMS
-# ============================================================
 
 train_transform = transforms.Compose([
     transforms.Resize((224, 224)),
@@ -59,9 +50,7 @@ val_transform = transforms.Compose([
     )
 ])
 
-# ============================================================
-# DATASETS
-# ============================================================
+
 
 train_dataset = datasets.ImageFolder(
     os.path.join(DATASET_DIR, "train"),
@@ -91,9 +80,6 @@ print("Train:", len(train_dataset))
 print("Validation:", len(val_dataset))
 print("Test:", len(test_dataset))
 
-# ============================================================
-# DATALOADERS
-# ============================================================
 
 train_loader = DataLoader(
     train_dataset,
